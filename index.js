@@ -95,8 +95,8 @@ Write a function called `inning` that generates a random number of points that a
 
 
 function inning() {
-  return Math.round(Math.random()*2); // add random number generator between 0 & 9;
-
+  return Math.round(Math.random()*2); // add random number generator between 0 & 2;
+  // = either 0, 1 or 2
 
 };
 
@@ -133,7 +133,6 @@ function finalScore(callback, inningNo) {  // using the inning cb from above
 
   }
    
- 
   // function inning(max) {  // callback function
   //   return Math.random(); // add random number generator between 0 & 9;
   
@@ -148,7 +147,7 @@ function finalScore(callback, inningNo) {  // using the inning cb from above
 
 console.log(finalScore(inning, 9)) // using the "inning" from above calling it here
 console.log(inning(), 9);
-console.log(finalScore(inning(), 2));
+// console.log(finalScore(inning(), 9));
 
 
 
@@ -156,8 +155,8 @@ console.log(finalScore(inning(), 2));
 
 Create a function called `scoreboard` that accepts the following parameters: 
 
-(1) Callback function `inning` that you wrote above
-(2) A number of innings
+(1) Callback function `inning` that you wrote above - inningScore???
+(2) A number of innings // inningNo
 
 and returns the score at each pont in the game, like so:
 
@@ -173,8 +172,40 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(innings, ) {
-  /* CODE HERE */
+function scoreboard(inning, inningNo) {
+  let homeScore = 0;
+  let awayScore = 0;
+
+  for (let i = 0; i < inningNo; i++) {
+    let homeScore = callback + inningNo;
+    let awayScore = callback + inningNo; 
+    // console.log(`${i} inning: ${homeScore} - ${awayScore}`)
+
+  }
+
+  let finalScore = `Final Score: ${homeScore} - ${awayScore}`;
+  return finalScore;
+
 }
 
+console.log(scoreBoard(inning, 9)) // using the "inning" from above calling it here
+console.log(inning());
 
+  // function inning() {
+  //   return Math.round(Math.random()*2); // add random number generator between 0 & 2;
+  //   // = either 0, 1 or 2
+  
+  // };
+
+  // let scoreObject = {
+  //   Home: homeScore,
+  //   Away: awayScore
+  // };
+
+  // return scoreObject;
+  
+
+// }
+
+// console.log(scoreBoard(inning, 9)) // using the "inning" from above calling it here
+// console.log(inning(), 9);
