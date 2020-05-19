@@ -95,7 +95,7 @@ Write a function called `inning` that generates a random number of points that a
 
 
 function inning() {
-  return Math.round(Math.random()*2); // add random number generator between 0 & 2;
+  return Math.floor(Math.random()* 2); // add random number generator between 0 & 2;
   // = either 0, 1 or 2
 
 };
@@ -120,13 +120,13 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(callback, inningNo) {  // using the inning cb from above
+function finalScore(inning, inningNo) {  // using the inning cb from above
   let homeScore = 0;
   let awayScore = 0;
 
   for (let i = 0; i < inningNo; i++) {
-    let homeScore = callback * inningNo;
-    let awayScore = callback * inningNo;
+    homeScore = inning() * inningNo;
+    awayScore = inning() * inningNo;
 
     // inning (random number) + homeScore
     // inning (random number) + awayScore
@@ -191,21 +191,21 @@ function scoreBoard(inning, inningNo) {
 console.log(scoreBoard(inning, 9)) // using the "inning" from above calling it here
 // console.log(inning());
 
-  // function inning() {
-  //   return Math.round(Math.random()*2); // add random number generator between 0 & 2;
-  //   // = either 0, 1 or 2
-  
-  // };
 
-  // let scoreObject = {
-  //   Home: homeScore,
-  //   Away: awayScore
-  // };
 
-  // return scoreObject;
-  
 
-// }
 
-// console.log(scoreBoard(inning, 9)) // using the "inning" from above calling it here
-// console.log(inning(), 9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
