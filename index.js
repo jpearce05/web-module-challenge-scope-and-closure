@@ -172,14 +172,14 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(inning, inningNo) {
+function scoreBoard(inning, inningNo) {
   let homeScore = 0;
   let awayScore = 0;
 
-  for (let i = 0; i < inningNo; i++) {
-    let homeScore = callback + inningNo;
-    let awayScore = callback + inningNo; 
-    // console.log(`${i} inning: ${homeScore} - ${awayScore}`)
+  for (let i = 1; i <= inningNo; i++) {
+    homeScore = inning() + inningNo;
+    awayScore = inning() + inningNo; 
+    console.log(`${i} inning: ${homeScore} - ${awayScore}`)
 
   }
 
@@ -189,7 +189,7 @@ function scoreboard(inning, inningNo) {
 }
 
 console.log(scoreBoard(inning, 9)) // using the "inning" from above calling it here
-console.log(inning());
+// console.log(inning());
 
   // function inning() {
   //   return Math.round(Math.random()*2); // add random number generator between 0 & 2;
